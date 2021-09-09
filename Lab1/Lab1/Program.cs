@@ -7,13 +7,6 @@ namespace Lab1
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("from test branch");
-            Console.WriteLine("from test branch");
-            Console.WriteLine("from test branch");
-
-            Console.WriteLine("another changs )");
-
         }
     }
 }
