@@ -13,6 +13,8 @@ namespace Lab1
             Console.WriteLine("from test branch");
 
             Console.WriteLine("another changs )");
+
+            Console.WriteLine("heheheheh");
         }
     }
 }
