@@ -5,36 +5,31 @@ namespace Calculater
 {
     public class MyCalculater
     {
-        public MyCalculater()
-        {
-            // I'm using class BigInterger to get result without errors
-            // (:
-        }
-
-
-        public string add(string s1, string s2)
+        public string Addition(string s1, string s2)
         {
             return BigInteger.Add(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
+
         public string Subtract(string s1, string s2)
         {
             return BigInteger.Subtract(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
 
-        internal static bool isOperation(string operation)
+        internal static bool IsOperation(string operation)
         {
+            Console.WriteLine(CalculatorConstants.Add);
             bool IsOperation ;
             IsOperation = operation switch
             {
-                "+" => true,
-                "-" => true,
-                "*" => true,
-                "/" => true,
+                CalculatorConstants.Add => true,
+                CalculatorConstants.Subtract => true,
+                CalculatorConstants.Multiply => true,
+                CalculatorConstants.Divide => true,
                 _ => false
             };
             if (!IsOperation)
             {
-                Console.WriteLine("operation is not correct!!");
+                Console.WriteLine(CalculatorConstants.OperationError);
             }
             return IsOperation;
         }
@@ -43,13 +38,13 @@ namespace Calculater
         {
             return BigInteger.Multiply(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
+
         public string Divide(string s1, string s2)
         {
             return BigInteger.Divide(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
 
-
-        public bool isNumbers(string n1, string n2)
+        public bool IsNumbers(string n1, string n2)
         {
             BigInteger number_1;
             if (BigInteger.TryParse(n1, out number_1))
@@ -60,26 +55,27 @@ namespace Calculater
                 }
                 else
                 {
-                    Console.WriteLine("The second orgument is not number!!");
+                    Console.WriteLine(CalculatorConstants.SecondArgumenError);
                 }
             }
             else
             {
-                Console.WriteLine("The first orgument is not number!!");
+                Console.WriteLine(CalculatorConstants.FirstArgumenError);
             }
             return false;
         }
-        public string proces(string n1, string oper, string n2)
+
+        public string Proces(string n1, string oper, string n2)
         {
             var number_1 = n1;
             var number_2 = n2;
             switch (oper)
             {
-                case "+":
-                    return add(number_1, number_2);
-                case "-":
+                case CalculatorConstants.Add:
+                    return Addition(number_1, number_2);
+                case CalculatorConstants.Subtract:
                     return Subtract(number_1, number_2);
-                case "*":
+                case CalculatorConstants.Multiply:
                     return Multiply(number_1, number_2);
                 default:
                     return Divide(number_1, number_2);

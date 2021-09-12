@@ -18,11 +18,11 @@ namespace Calculater
                 operation = args[1];
                 numbver_2 = args[2];
 
-                if (myCalcuater.isNumbers(numbver_1, numbver_2))
+                if (myCalcuater.IsNumbers(numbver_1, numbver_2))
                 {
-                    if (MyCalculater.isOperation(operation))
+                    if (MyCalculater.IsOperation(operation))
                     {
-                        Console.WriteLine(myCalcuater.proces(numbver_1, operation, numbver_2));
+                        Console.WriteLine(myCalcuater.Proces(numbver_1, operation, numbver_2));
                         return 0;
                     }
                 }
