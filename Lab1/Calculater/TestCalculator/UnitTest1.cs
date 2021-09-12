@@ -16,7 +16,7 @@ namespace TestCalculator
         {
             var calculater = new Calculater.MyCalculater();
 
-            Assert.Equal(calculater.proces(n1,operation, n2), result);
+            Assert.Equal(calculater.Proces(n1,operation, n2), result);
         }
 
         [Theory]
@@ -28,7 +28,7 @@ namespace TestCalculator
         {
             var calculater = new Calculater.MyCalculater();
 
-            Assert.Equal(calculater.add(n1, n2), result);
+            Assert.Equal(calculater.Addition(n1, n2), result);
         }
         [Theory]
         [InlineData("2", "2", "0")]
