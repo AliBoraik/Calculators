@@ -20,6 +20,25 @@ namespace Calculater
         {
             return BigInteger.Subtract(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
+
+        internal static bool isOperation(string operation)
+        {
+            bool IsOperation ;
+            IsOperation = operation switch
+            {
+                "+" => true,
+                "-" => true,
+                "*" => true,
+                "/" => true,
+                _ => false
+            };
+            if (!IsOperation)
+            {
+                Console.WriteLine("operation is not correct!!");
+            }
+            return IsOperation;
+        }
+
         public string Multiply(string s1, string s2)
         {
             return BigInteger.Multiply(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
@@ -62,10 +81,8 @@ namespace Calculater
                     return Subtract(number_1, number_2);
                 case "*":
                     return Multiply(number_1, number_2);
-                case "/":
-                    return Divide(number_1, number_2);
                 default:
-                    return "operation is not correct!!";
+                    return Divide(number_1, number_2);
             }
         }
 

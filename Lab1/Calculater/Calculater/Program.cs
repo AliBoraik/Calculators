@@ -4,9 +4,8 @@ namespace Calculater
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-
+        static int Main(string[] args)
+        {         
             if (args.Length == 3)
             {
                 string numbver_1 ;
@@ -21,13 +20,18 @@ namespace Calculater
 
                 if (myCalcuater.isNumbers(numbver_1, numbver_2))
                 {
-                    Console.WriteLine(myCalcuater.proces(numbver_1, operation, numbver_2));
+                    if (MyCalculater.isOperation(operation))
+                    {
+                        Console.WriteLine(myCalcuater.proces(numbver_1, operation, numbver_2));
+                        return 0;
+                    }
                 }
             }
             else
             {
                 Console.WriteLine("неверное количество аргументов");
             }
+            return 1;
         }
     }
 }
