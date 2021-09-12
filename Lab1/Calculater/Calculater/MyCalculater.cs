@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace Calculater
 {
-    class MyCalculater
+    public class MyCalculater
     {
         public MyCalculater()
         {
@@ -12,21 +12,21 @@ namespace Calculater
         }
 
 
-        public BigInteger add(string s1, string s2)
+        public string add(string s1, string s2)
         {
-            return BigInteger.Add(BigInteger.Parse(s1), BigInteger.Parse(s2));
+            return BigInteger.Add(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
-        public BigInteger Subtract(string s1, string s2)
+        public string Subtract(string s1, string s2)
         {
-            return BigInteger.Subtract(BigInteger.Parse(s1), BigInteger.Parse(s2));
+            return BigInteger.Subtract(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
-        public BigInteger Multiply(string s1, string s2)
+        public string Multiply(string s1, string s2)
         {
-            return BigInteger.Multiply(BigInteger.Parse(s1), BigInteger.Parse(s2));
+            return BigInteger.Multiply(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
-        public BigInteger Divide(string s1, string s2)
+        public string Divide(string s1, string s2)
         {
-            return BigInteger.Divide(BigInteger.Parse(s1), BigInteger.Parse(s2));
+            return BigInteger.Divide(BigInteger.Parse(s1), BigInteger.Parse(s2)).ToString();
         }
 
 
@@ -50,28 +50,22 @@ namespace Calculater
             }
             return false;
         }
-        public void proces(string n1, string oper, string n2)
+        public string proces(string n1, string oper, string n2)
         {
             var number_1 = n1;
             var number_2 = n2;
             switch (oper)
             {
                 case "+":
-                    Console.WriteLine(add(number_1, number_2).ToString());
-                    break;
+                    return add(number_1, number_2);
                 case "-":
-                    Console.WriteLine(Subtract(number_1, number_2).ToString());
-                    break;
+                    return Subtract(number_1, number_2);
                 case "*":
-                    Console.WriteLine(Multiply(number_1, number_2).ToString());
-                    break;
+                    return Multiply(number_1, number_2);
                 case "/":
-                    Console.WriteLine(Divide(number_1, number_2).ToString());
-                    break;
-
+                    return Divide(number_1, number_2);
                 default:
-                    Console.WriteLine("operation is not correct!!");
-                    break;
+                    return "operation is not correct!!";
             }
         }
 

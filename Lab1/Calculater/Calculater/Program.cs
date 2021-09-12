@@ -21,7 +21,7 @@ namespace Calculater
 
                 if (myCalcuater.isNumbers(numbver_1, numbver_2))
                 {
-                    myCalcuater.proces(numbver_1, operation, numbver_2);
+                    Console.WriteLine(myCalcuater.proces(numbver_1, operation, numbver_2));
                 }
             }
             else
