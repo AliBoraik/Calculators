@@ -12,7 +12,7 @@ namespace TestProject1
         [InlineData(new []{"3"+"/"+"3"},"0")]
         public static void TestMain_Result_Main(string[] args,int restult)
         {
-            Assert.Equal(24,CalculaterIL.Program.Main(args));
+            Assert.Equal(restult,CalculaterIL.Program.Main(args));
         }
         
         [Theory]
@@ -22,7 +22,7 @@ namespace TestProject1
         [InlineData(new []{"3"+" "+"3"},"1")]
         public static void TestMain_ReturmOne(string[] args,int restult)
         {
-            Assert.Equal(24,CalculaterIL.Program.Main(args));
+            Assert.Equal(restult,CalculaterIL.Program.Main(args));
         }
     }
 }
