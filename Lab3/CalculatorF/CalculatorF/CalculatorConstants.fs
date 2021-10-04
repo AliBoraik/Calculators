@@ -36,4 +36,4 @@ module CalculatorConstants =
     let NumbersErrors = 2
 
     [<Literal>]
-    let ArgumenError = 2
+    let ArgumenError = 3
