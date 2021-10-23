@@ -1,6 +1,5 @@
 ﻿namespace WebApplication
 
-open CalculatorF
 open Microsoft.AspNetCore.Builder
 open Microsoft.Extensions.Hosting
 open Microsoft.Extensions.Logging
