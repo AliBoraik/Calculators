@@ -6,9 +6,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Handlers\Handler.fs"/>
         <Compile Include="CalculatorConstants.fs"/>
         <Compile Include="MyCalculator.fs"/>
+        <Compile Include="Handlers\Handler.fs"/>
         <Compile Include="Startup.fs"/>
         <Compile Include="Program.fs"/>
     </ItemGroup>

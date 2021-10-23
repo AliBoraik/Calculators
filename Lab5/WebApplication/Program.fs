@@ -1,7 +1,7 @@
 open System.IO
 open Microsoft.AspNetCore.Hosting
 open Microsoft.Extensions.Hosting
-open Startup
+open WebApplication
 
 let contentRoot = Directory.GetCurrentDirectory()
 let webRoot = Path.Combine(contentRoot, "WebRoot")
