@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>WebApplication12</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="CalculatorConstants.fs"/>
+        <Compile Include="MyCalculator.fs"/>
+        <Compile Include="Handlers\Handler.fs"/>
+        <Compile Include="Startup.fs"/>
+        <Compile Include="Program.fs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Giraffe" Version="5.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="WebRoot\Home\index.html"/>
+        <Content Include="WebRoot\Home\style.css"/>
+        <Content Include="WebRoot\Error\NotFoundPage.html"/>
+    </ItemGroup>
+
+</Project>
