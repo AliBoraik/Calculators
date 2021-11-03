@@ -27,6 +27,17 @@ module public MyCalculator =
         else
             SetError(NotIntegerErrorMassage)
             Error NumbersErrorCode
+    let CheckNumberTwo (a: String, op: String) =
+        let t, r = Decimal.TryParse a
+
+        if op.Equals(Divide) && int r = 0 then
+            SetError(DivideByZero)
+            Error NumbersErrorCode
+        else if t = true then
+            Ok Ok_Code
+        else
+            SetError(NotIntegerErrorMassage)
+            Error NumbersErrorCode        
 
     let CheckOperation (operation: String) =
         match operation with
@@ -74,6 +85,6 @@ module public MyCalculator =
         maybe {
             let! _num1 = CheckNumber n1
             let! _opr = CheckOperation op
-            let! _num2 = CheckNumber n2
+            let! _num2 = CheckNumberTwo(n2,op)
             return Proces(n1, op, n2)
         }
