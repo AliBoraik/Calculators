@@ -16,6 +16,9 @@ module public CalculatorConstants =
 
     [<Literal>]
     let NotIntegerErrorMassage = "Argument is not numbers or so long..."
+    
+    [<Literal>]
+    let DivideByZero = "Attempted to divide by zero."
 
     [<Literal>]
     let OperationErrorMassage = "Operation is not correct!!"
