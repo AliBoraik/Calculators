@@ -19,7 +19,7 @@ namespace Calculator_MVC.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public IActionResult Result(Result result)
         {
             var resultObject = _calculator.Process(result.num1, result.opre, result.num2);
