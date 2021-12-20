@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\git .NET\Homework\Lab5\WebApplication\WebApplication.fsproj" />
+        <ProjectReference Include="..\..\..\git .NET\Homework\Lab7\Claculator_MVC\Calculator_MVC\Calculator_MVC\Calculator_MVC.csproj" />
+        <ProjectReference Include="..\Calculator_MVC\Calculator_MVC.csproj" />
+        <ProjectReference Include="..\WebApplication\WebApplication.fsproj" />
+    </ItemGroup>
+
+</Project>
