@@ -35,7 +35,7 @@ namespace TestBenchmark
         [Benchmark]
         public int Generic()
         {
-            return _c.GenericMethod(1);
+            return _c.GenericMethod<int>(1);
         }
 
         [Benchmark]
